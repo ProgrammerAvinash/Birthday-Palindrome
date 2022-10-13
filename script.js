@@ -23,9 +23,11 @@ function onShowClicked() {
 
   let joinedDOB_String = diplayedDOB_Value.split("").reverse().join("");
   console.log(joinedDOB_String);
-
-  if (diplayedDOB_Value == joinedDOB_String) {
-    var PalindromeString = "Your Birthday is Palindrome";
+  if (diplayedDOB_Value == "") {
+    console.log("PalindromeString  is empty");
+    var PalindromeString = "Please Enter Date";
+  } else if (diplayedDOB_Value == joinedDOB_String) {
+    PalindromeString = "Your Birthday is Palindrome";
   } else {
     PalindromeString = "Your Birthday is not Plaindrome";
   }
